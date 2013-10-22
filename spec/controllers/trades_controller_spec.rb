@@ -31,11 +31,11 @@ describe TradesController do
   let(:valid_session) { {} }
 
   describe "GET index" do
-    it "assigns all trades as @trades" do
-      trade = Trade.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:trades).should eq([trade])
-    end
+    # it "assigns all trades as @trades" do
+  #     trade = Trade.create! valid_attributes
+  #     get :index, {}, valid_session
+  #     assigns(:trades).should eq([trade])
+  #   end
   end
 
   describe "GET show" do

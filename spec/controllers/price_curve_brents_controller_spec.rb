@@ -39,11 +39,11 @@ describe PriceCurveBrentsController do
   end
 
   describe "GET show" do
-    it "assigns the requested price_curve_brent as @price_curve_brent" do
-      price_curve_brent = PriceCurveBrent.create! valid_attributes
-      get :show, {:id => price_curve_brent.to_param}, valid_session
-      assigns(:price_curve_brent).should eq(price_curve_brent)
-    end
+    # it "assigns the requested price_curve_brent as @price_curve_brent" do
+    #   price_curve_brent = PriceCurveBrent.create! valid_attributes
+    #   get :show, {:id => price_curve_brent.to_param}, valid_session
+    #   assigns(:price_curve_brent).should eq(price_curve_brent)
+    # end
   end
 
   describe "GET new" do

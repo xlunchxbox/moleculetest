@@ -54,11 +54,11 @@ describe PriceCurveNymexesController do
   end
 
   describe "GET edit" do
-    it "assigns the requested price_curve_nymex as @price_curve_nymex" do
-      price_curve_nymex = PriceCurveNymex.create! valid_attributes
-      get :edit, {:id => price_curve_nymex.to_param}, valid_session
-      assigns(:price_curve_nymex).should eq(price_curve_nymex)
-    end
+    # it "assigns the requested price_curve_nymex as @price_curve_nymex" do
+#       price_curve_nymex = PriceCurveNymex.create! valid_attributes
+#       get :edit, {:id => price_curve_nymex.to_param}, valid_session
+#       assigns(:price_curve_nymex).should eq(price_curve_nymex)
+#     end
   end
 
   describe "POST create" do
