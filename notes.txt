@@ -1,0 +1,57 @@
+ice brent
+Month/Year, Open, High, Low, Settle, Chg, BWAVE, Vol, EFP, EFS, Block, Prev Day Vol, Prev Day Open
+
+ice witi
+Month/Year, Open, High, Low, Settle, Chg, Vol, EFP, EFS, Block, Prev Day Vol, Prev Day Open
+
+Nymex
+Month/Year, Open, High, Low, Last, Settle, Chg, Estimated Volume, Prior Day Open Interest
+
+
+ice_brent
+Month/Year, Open, High, Low, Settle, Chg
+
+ice_WTI
+Month/Year, Open, High, Low, Settle, Chg
+
+Nymex
+Month/Year, Open, High, Low, Settle, Chg
+
+
+You Need to Show
+All the trades		DONE i think
+Price Curve Type	
+Market Price = settle price
+
+
+
+
+
+What is a price curve type?
+Are all the columns relevant in price curves files?
+It seems like all I need is month and settle price?
+
+In trades, does MTM Curve tell me what price curve file to use? and is this what displaying the price curve type means?
+
+Market Price, do you want settle price per month? Average Settle price?
+
+Nymex #3
+
+m = 7
+v = 10000
+p = 78
+c = apr 97.03 
+	may 96.88
+	jun 96.65
+	jul 96.38
+	aug 96.08
+	sep 95.78
+	oct 95.48
+	
+	75683400 + 75566400 + 75387000 + 75176400 + 74942400 + 74708400 + 74474400 = 525,938,400
+	
+	
+	
+	
+	
+	
