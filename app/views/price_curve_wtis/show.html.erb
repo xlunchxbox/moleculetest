@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month year:</strong>
+  <%= @price_curve_wti.month_year %>
+</p>
+
+<p>
+  <strong>Settle price:</strong>
+  <%= @price_curve_wti.settle_price %>
+</p>
+
+<%= link_to 'Edit', edit_price_curve_wti_path(@price_curve_wti) %> |
+<%= link_to 'Back', price_curve_wtis_path %>

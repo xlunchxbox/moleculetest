@@ -1,0 +1,29 @@
+<h1>Ice WTI Price Curve</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month year</th>
+      <th>Settle price</th>
+      <!-- <th></th>
+      <th></th>
+      <th></th> -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_curve_wtis.each do |price_curve_wti| %>
+      <tr>
+        <td><%= price_curve_wti.month_year %></td>
+        <td><%= price_curve_wti.settle_price %></td>
+        <!-- <td><%= link_to 'Show', price_curve_wti %></td>
+        <td><%= link_to 'Edit', edit_price_curve_wti_path(price_curve_wti) %></td>
+        <td><%= link_to 'Destroy', price_curve_wti, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr> -->
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Price curve wti', new_price_curve_wti_path %>

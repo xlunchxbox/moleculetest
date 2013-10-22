@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month year:</strong>
+  <%= @price_curve_brent.month_year %>
+</p>
+
+<p>
+  <strong>Settle price:</strong>
+  <%= @price_curve_brent.settle_price %>
+</p>
+
+<%= link_to 'Edit', edit_price_curve_brent_path(@price_curve_brent) %> |
+<%= link_to 'Back', price_curve_brents_path %>

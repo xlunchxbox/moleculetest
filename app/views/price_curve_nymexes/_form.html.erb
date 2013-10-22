@@ -1,0 +1,25 @@
+<%= form_for(@price_curve_nymex) do |f| %>
+  <% if @price_curve_nymex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@price_curve_nymex.errors.count, "error") %> prohibited this price_curve_nymex from being saved:</h2>
+
+      <ul>
+      <% @price_curve_nymex.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :month_year %><br>
+    <%= f.datetime_select :month_year %>
+  </div>
+  <div class="field">
+    <%= f.label :settle_price %><br>
+    <%= f.text_field :settle_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

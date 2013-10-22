@@ -16,9 +16,9 @@
       <th>Brokerage</th>
       <th>Tags</th>
       <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Detailed Information</th>
+      <!-- <th></th>
+      <th></th> -->
     </tr>
   </thead>
 
@@ -38,9 +38,9 @@
         <td><%= trade.brokerage %></td>
         <td><%= trade.tags %></td>
         <td><%= trade.notes %></td>
-        <td><%= link_to 'Show', trade %></td>
-        <td><%= link_to 'Edit', edit_trade_path(trade) %></td>
-        <td><%= link_to 'Destroy', trade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Info', trade, :class => 'button'   %></td>
+        <!-- <td><%= link_to 'Edit', edit_trade_path(trade) %></td>
+        <td><%= link_to 'Destroy', trade, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

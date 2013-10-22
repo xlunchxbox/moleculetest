@@ -1,4 +1,10 @@
 Molecule::Application.routes.draw do
+  resources :price_curve_brents
+
+  resources :price_curve_wtis
+
+  resources :price_curve_nymexes
+
   get "static_pages/home"
   resources :trades
   

@@ -1,69 +1,43 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></td>
 
-<p>
-  <strong>Counter party:</strong>
-  <%= @trade.counter_party %>
-</p>
+<table>
+	<table>
+	  <thead>
+	    <tr>
+			<th>Counter party</th>
+			<th>Trader</th>
+			<th>Mtm curve</th>
+			<th>Buy sell</th>
+			<th>Price</th>
+			<th>Volume</th>
+			<th>Tenor start</th>
+			<th>Tenor end</th>
+			<th>Delivery location</th>
+			<th>Instrument</th>
+			<th>Brokerage</th>
+			<th>Tags</th>
+			<th>Notes</th>
+	    </tr>
+		</thead>
+		<tr>
+			<td><%= @trade.counter_party %></td>
+			<td><%= @trade.trader %></td>
+			<td><%= @trade.mtm_curve %></td>
+			<td><%= @trade.buy_sell %></td>
+			<td><%= @trade.price %></td>
+			<td><%= @trade.volume %></td>
+			<td><%= @trade.tenor_start %></td>
+			<td><%= @trade.tenor_end %></td>
+			<td><%= @trade.delivery_location %></td>
+			<td><%= @trade.instrument %></td>
+			<td><%= @trade.brokerage %></td>
+			<td><%= @trade.tags %></td>
+			<td><%= @trade.notes %></td>	
+		</tr>
+</table>
 
-<p>
-  <strong>Trader:</strong>
-  <%= @trade.trader %>
-</p>
 
-<p>
-  <strong>Mtm curve:</strong>
-  <%= @trade.mtm_curve %>
-</p>
 
-<p>
-  <strong>Buy sell:</strong>
-  <%= @trade.buy_sell %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @trade.price %>
-</p>
-
-<p>
-  <strong>Volume:</strong>
-  <%= @trade.volume %>
-</p>
-
-<p>
-  <strong>Tenor start:</strong>
-  <%= @trade.tenor_start %>
-</p>
-
-<p>
-  <strong>Tenor end:</strong>
-  <%= @trade.tenor_end %>
-</p>
-
-<p>
-  <strong>Delivery location:</strong>
-  <%= @trade.delivery_location %>
-</p>
-
-<p>
-  <strong>Instrument:</strong>
-  <%= @trade.instrument %>
-</p>
-
-<p>
-  <strong>Brokerage:</strong>
-  <%= @trade.brokerage %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= @trade.tags %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @trade.notes %>
-</p>
 
 <%= link_to 'Edit', edit_trade_path(@trade) %> |
 <%= link_to 'Back', trades_path %>

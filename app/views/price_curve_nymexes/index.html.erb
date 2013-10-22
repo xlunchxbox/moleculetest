@@ -1,0 +1,29 @@
+<h1>Nymex Price Curve</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month year</th>
+      <th>Settle price</th>
+      <!-- <th></th>
+      <th></th>
+      <th></th> -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_curve_nymexes.each do |price_curve_nymex| %>
+      <tr>
+        <td><%= price_curve_nymex.month_year %></td>
+        <td><%= price_curve_nymex.settle_price %></td>
+        <!-- <td><%= link_to 'Show', price_curve_nymex %></td>
+        <td><%= link_to 'Edit', edit_price_curve_nymex_path(price_curve_nymex) %></td>
+        <td><%= link_to 'Destroy', price_curve_nymex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr> -->
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Price curve nymex', new_price_curve_nymex_path %>
