@@ -1,0 +1,69 @@
+<%= form_for(@trade) do |f| %>
+  <% if @trade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trade.errors.count, "error") %> prohibited this trade from being saved:</h2>
+
+      <ul>
+      <% @trade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :counter_party %><br>
+    <%= f.text_field :counter_party %>
+  </div>
+  <div class="field">
+    <%= f.label :trader %><br>
+    <%= f.text_field :trader %>
+  </div>
+  <div class="field">
+    <%= f.label :mtm_curve %><br>
+    <%= f.text_field :mtm_curve %>
+  </div>
+  <div class="field">
+    <%= f.label :buy_sell %><br>
+    <%= f.text_field :buy_sell %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :volume %><br>
+    <%= f.number_field :volume %>
+  </div>
+  <div class="field">
+    <%= f.label :tenor_start %><br>
+    <%= f.datetime_select :tenor_start %>
+  </div>
+  <div class="field">
+    <%= f.label :tenor_end %><br>
+    <%= f.datetime_select :tenor_end %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_location %><br>
+    <%= f.text_field :delivery_location %>
+  </div>
+  <div class="field">
+    <%= f.label :instrument %><br>
+    <%= f.text_field :instrument %>
+  </div>
+  <div class="field">
+    <%= f.label :brokerage %><br>
+    <%= f.text_field :brokerage %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

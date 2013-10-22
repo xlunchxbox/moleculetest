@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Counter party:</strong>
+  <%= @trade.counter_party %>
+</p>
+
+<p>
+  <strong>Trader:</strong>
+  <%= @trade.trader %>
+</p>
+
+<p>
+  <strong>Mtm curve:</strong>
+  <%= @trade.mtm_curve %>
+</p>
+
+<p>
+  <strong>Buy sell:</strong>
+  <%= @trade.buy_sell %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @trade.price %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @trade.volume %>
+</p>
+
+<p>
+  <strong>Tenor start:</strong>
+  <%= @trade.tenor_start %>
+</p>
+
+<p>
+  <strong>Tenor end:</strong>
+  <%= @trade.tenor_end %>
+</p>
+
+<p>
+  <strong>Delivery location:</strong>
+  <%= @trade.delivery_location %>
+</p>
+
+<p>
+  <strong>Instrument:</strong>
+  <%= @trade.instrument %>
+</p>
+
+<p>
+  <strong>Brokerage:</strong>
+  <%= @trade.brokerage %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @trade.tags %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @trade.notes %>
+</p>
+
+<%= link_to 'Edit', edit_trade_path(@trade) %> |
+<%= link_to 'Back', trades_path %>

@@ -1,0 +1,52 @@
+<h1>Listing Trades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Counter party</th>
+      <th>Trader</th>
+      <th>Mtm curve</th>
+      <th>Buy sell</th>
+      <th>Price</th>
+      <th>Volume</th>
+      <th>Tenor start</th>
+      <th>Tenor end</th>
+      <th>Delivery location</th>
+      <th>Instrument</th>
+      <th>Brokerage</th>
+      <th>Tags</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trades.each do |trade| %>
+      <tr>
+        <td><%= trade.counter_party %></td>
+        <td><%= trade.trader %></td>
+        <td><%= trade.mtm_curve %></td>
+        <td><%= trade.buy_sell %></td>
+        <td><%= trade.price %></td>
+        <td><%= trade.volume %></td>
+        <td><%= trade.tenor_start %></td>
+        <td><%= trade.tenor_end %></td>
+        <td><%= trade.delivery_location %></td>
+        <td><%= trade.instrument %></td>
+        <td><%= trade.brokerage %></td>
+        <td><%= trade.tags %></td>
+        <td><%= trade.notes %></td>
+        <td><%= link_to 'Show', trade %></td>
+        <td><%= link_to 'Edit', edit_trade_path(trade) %></td>
+        <td><%= link_to 'Destroy', trade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trade', new_trade_path, :class => 'button'   %>
+<%= link_to 'Back', root_path , :class => 'button'  %>
