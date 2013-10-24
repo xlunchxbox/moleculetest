@@ -25,7 +25,10 @@ class TradesController < ApplicationController
   # POST /trades.json
   def create
     @trade = Trade.new(trade_params)
-
+    
+    @trade.timespan = (((@trade.tenor_end - @trade.tenor_start).to_f / 30) + 1).round
+    
+    
     respond_to do |format|
       if @trade.save
         format.html { redirect_to @trade, notice: 'Trade was successfully created.' }
@@ -61,6 +64,11 @@ class TradesController < ApplicationController
     end
   end
   
+  def read
+
+  end
+  
+  
   
 
   private
@@ -71,6 +79,6 @@ class TradesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trade_params
-      params.require(:trade).permit(:counter_party, :trader, :mtm_curve, :buy_sell, :price, :volume, :tenor_start, :tenor_end, :delivery_location, :instrument, :brokerage, :tags, :notes)
+      params.require(:trade).permit(:counter_party, :trader, :mtm_curve, :buy_sell, :price, :volume, :tenor_start, :tenor_end, :delivery_location, :instrument, :brokerage, :tags, :notes, :timespan, :mark_to_market)
     end
 end

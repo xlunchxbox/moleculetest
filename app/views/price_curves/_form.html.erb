@@ -1,0 +1,29 @@
+<%= form_for(@price_curf) do |f| %>
+  <% if @price_curf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@price_curf.errors.count, "error") %> prohibited this price_curf from being saved:</h2>
+
+      <ul>
+      <% @price_curf.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :curve_type %><br>
+    <%= f.text_field :curve_type %>
+  </div>
+  <div class="field">
+    <%= f.label :month_year %><br>
+    <%= f.date_select :month_year %>
+  </div>
+  <div class="field">
+    <%= f.label :settle_price %><br>
+    <%= f.text_field :settle_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

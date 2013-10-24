@@ -1,0 +1,32 @@
+<h1>Price Curves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Curve type</th>
+      <th>Month year</th>
+      <th>Settle price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_curves.each do |price_curf| %>
+      <tr>
+        <td><%= price_curf.curve_type %></td>
+        <td><%= price_curf.month_year %></td>
+        <td><%= price_curf.settle_price %></td>
+        <td><%= link_to 'Show', price_curf %></td>
+        <td><%= link_to 'Edit', edit_price_curf_path(price_curf) %></td>
+        <td><%= link_to 'Destroy', price_curf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Home', root_path, :class => 'button'   %>
+<%= link_to 'New Price Curve', new_price_curf_path, :class => 'button'   %>

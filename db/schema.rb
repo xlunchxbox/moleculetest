@@ -11,24 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131022171520) do
+ActiveRecord::Schema.define(version: 20131024224248) do
 
   create_table "price_curve_brents", force: true do |t|
-    t.datetime "month_year"
+    t.date     "month_year"
     t.float    "settle_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "price_curve_nymexes", force: true do |t|
-    t.datetime "month_year"
+    t.date     "month_year"
     t.float    "settle_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "price_curve_wtis", force: true do |t|
-    t.datetime "month_year"
+    t.date     "month_year"
+    t.float    "settle_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "price_curves", force: true do |t|
+    t.string   "curve_type"
+    t.date     "month_year"
     t.float    "settle_price"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -41,13 +49,15 @@ ActiveRecord::Schema.define(version: 20131022171520) do
     t.string   "buy_sell"
     t.integer  "price"
     t.integer  "volume"
-    t.datetime "tenor_start"
-    t.datetime "tenor_end"
+    t.date     "tenor_start"
+    t.date     "tenor_end"
     t.string   "delivery_location"
     t.string   "instrument"
     t.string   "brokerage"
     t.string   "tags"
     t.string   "notes"
+    t.integer  "timespan"
+    t.float    "mark_to_market"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

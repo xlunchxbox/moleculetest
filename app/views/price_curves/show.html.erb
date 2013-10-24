@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Curve type:</strong>
+  <%= @price_curf.curve_type %>
+</p>
+
+<p>
+  <strong>Month year:</strong>
+  <%= @price_curf.month_year %>
+</p>
+
+<p>
+  <strong>Settle price:</strong>
+  <%= @price_curf.settle_price %>
+</p>
+
+<%= link_to 'Edit', edit_price_curf_path(@price_curf) %> |
+<%= link_to 'Back', price_curves_path %>

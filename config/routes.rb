@@ -1,4 +1,6 @@
 Molecule::Application.routes.draw do
+  resources :price_curves
+
   resources :price_curve_brents
 
   resources :price_curve_wtis

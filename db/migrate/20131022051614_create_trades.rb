@@ -7,13 +7,15 @@ class CreateTrades < ActiveRecord::Migration
       t.string :buy_sell
       t.integer :price
       t.integer :volume
-      t.datetime :tenor_start
-      t.datetime :tenor_end
+      t.date :tenor_start
+      t.date :tenor_end
       t.string :delivery_location
       t.string :instrument
       t.string :brokerage
       t.string :tags
       t.string :notes
+      t.integer :timespan
+      t.float :mark_to_market
 
       t.timestamps
     end
